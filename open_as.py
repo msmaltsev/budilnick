@@ -15,7 +15,7 @@ def runAppleScript(f, *args):
 
 if __name__ == '__main__':
 
-    cwd = '/Users/sergejmaltcev/Desktop/scripts/'
+    cwd = os.path.dirname(os.path.realpath(__file__))
 
     radio = choose(cwd+'radio.txt')
     traffic = choose(cwd+'traffic.txt')
