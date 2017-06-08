@@ -1,0 +1,23 @@
+tell application "Google Chrome"
+    open location "%s"
+    end tell
+
+tell application "Google Chrome"
+    make new window
+    activate
+    open location "%s"
+end tell
+
+tell application "Google Chrome"
+    make new window
+    activate
+    open location "%s"
+end tell
+
+
+tell application "System Events" to tell process "Google Chrome"
+    set size of window 2 to {684, 760}
+    set position of window 2 to {0,0}
+    set size of window 1 to {684, 760}
+    set position of window 1 to {685,0}
+end tell
