@@ -17,7 +17,7 @@ if __name__ == '__main__':
 
     cwd = os.path.dirname(os.path.realpath(__file__))
 
-    radio = choose(cwd+'radio.txt')
-    traffic = choose(cwd+'traffic.txt')
-    weather = choose(cwd+'weather.txt')
-    runAppleScript(cwd+'applescript_budilnick.txt', radio, weather, traffic)
+    radio = choose(cwd+'/radio.txt')
+    traffic = choose(cwd+'/traffic.txt')
+    weather = choose(cwd+'/weather.txt')
+    runAppleScript(cwd+'/applescript_budilnick.txt', radio, weather, traffic)
