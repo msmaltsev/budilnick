@@ -21,3 +21,11 @@ tell application "System Events" to tell process "Google Chrome"
     set size of window 1 to {684, 760}
     set position of window 1 to {685,0}
 end tell
+
+
+repeat 5 times
+    tell application "Google Chrome"
+        reload active tab of window 1
+    end tell
+    delay %s
+end repeat

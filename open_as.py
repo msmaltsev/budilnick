@@ -12,9 +12,9 @@ def choose(f):
     c = random.choice(f)
     return c
 
-def runAppleScript(f, *args):
+def runAppleScript(f, delay, *args):
     f = open(f, encoding='utf8').read()
-    f = f%(radio, traffic, weather)
+    f = f%(radio, weather, traffic, delay)
     os.system("osascript -e '%s'"%f)
 
 if __name__ == '__main__':
@@ -26,6 +26,6 @@ if __name__ == '__main__':
         print('radio_only')
         webbrowser.open(radio)
     else:
-        traffic = choose(cwd+'/traffic.txt')
         weather = choose(cwd+'/weather.txt')
-        runAppleScript(cwd+'/applescript_budilnick.txt', radio, weather, traffic)
+        traffic = choose(cwd+'/traffic.txt')
+        runAppleScript(cwd+'/applescript_budilnick.txt', 600, radio, weather, traffic)
